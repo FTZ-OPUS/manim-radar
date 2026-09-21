@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "manim-radar"
+version = "0.1.0"
+description = "Animated radar (spider) charts for Manim — build, morph and play whole radar-chart sequences with one line of code."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "FTZ-OPUS", email = "1710644976@qq.com" }]
+keywords = [
+    "manim",
+    "manim-plugin",
+    "radar-chart",
+    "spider-chart",
+    "web-chart",
+    "data-visualization",
+    "animation",
+    "morph",
+    "education",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "manim>=0.18",
+    "numpy>=1.23",
+]
+
+[project.optional-dependencies]
+# 文档/演示用（把 demo 导出成 gif）
+docs = ["Pillow>=9.5"]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/FTZ-OPUS/manim-radar"
+Repository = "https://github.com/FTZ-OPUS/manim-radar"
+Issues = "https://github.com/FTZ-OPUS/manim-radar/issues"
+Changelog = "https://github.com/FTZ-OPUS/manim-radar/blob/main/CHANGELOG.md"
+
+# 注册成 Manim 插件：pip 装完后 `manim plugins` 就能看到本包。
+[project.entry-points."manim.plugins"]
+manim_radar = "manim_radar"
+
+# 命令行小工具：一键生成模板场景 / 列出主题 / 渲染 demo。
+[project.scripts]
+manim-radar = "manim_radar.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/manim_radar"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/manim_radar",
+    "examples",
+    "tests",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "LICENSE",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,13 @@
+# Normalise line endings in text files so a Windows checkout does not churn the
+# whole tree; keep binary assets untouched.
+* text=auto eol=lf
+
+*.png binary
+*.gif binary
+*.jpg binary
+*.mp4 binary
+
+*.py   text diff=python
+*.toml text
+*.yml  text
+*.md   text

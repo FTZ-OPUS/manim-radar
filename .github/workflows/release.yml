@@ -1,0 +1,24 @@
+name: Release
+
+# Publishes to PyPI when a version tag is pushed.
+# Uses PyPI Trusted Publishing — configure the publisher on PyPI first
+# (project: manim-radar, owner: FTZ-OPUS, workflow: release.yml,
+#  environment: pypi). No API token needs to be stored.
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build
+      - run: python -m build
+      - uses: pypa/gh-action-pypi-publish@release/v1
