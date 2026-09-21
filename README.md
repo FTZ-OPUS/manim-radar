@@ -2,8 +2,8 @@
 
 **Animated radar (spider) charts for [Manim](https://www.manim.community/) — build one, morph it into another, or play a whole sequence with a single command.**
 
-[![PyPI](https://img.shields.io/pypi/v/manim-radar?color=17b8ba)](https://pypi.org/project/manim-radar/)
-[![Python](https://img.shields.io/pypi/pyversions/manim-radar)](https://pypi.org/project/manim-radar/)
+[![PyPI](https://img.shields.io/pypi/v/manim-rader?color=17b8ba)](https://pypi.org/project/manim-rader/)
+[![Python](https://img.shields.io/pypi/pyversions/manim-rader)](https://pypi.org/project/manim-rader/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![CI](https://github.com/FTZ-OPUS/manim-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/FTZ-OPUS/manim-radar/actions/workflows/ci.yml)
 
@@ -36,7 +36,7 @@ manim -qh demo.py Demo          # 1080p60
 ## Install
 
 ```bash
-pip install manim-radar
+pip install manim-rader
 ```
 
 Requires Python ≥ 3.9, `manim >= 0.18` and `numpy`. `pip` pulls those in for you.

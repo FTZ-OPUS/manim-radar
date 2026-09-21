@@ -2,8 +2,8 @@
 
 **给 [Manim](https://www.manim.community/) 用的雷达图（蛛网图）动画库 —— 建一张图、一句话变形到另一张、或者一句话播完整条序列。**
 
-[![PyPI](https://img.shields.io/pypi/v/manim-radar?color=17b8ba)](https://pypi.org/project/manim-radar/)
-[![Python](https://img.shields.io/pypi/pyversions/manim-radar)](https://pypi.org/project/manim-radar/)
+[![PyPI](https://img.shields.io/pypi/v/manim-rader?color=17b8ba)](https://pypi.org/project/manim-rader/)
+[![Python](https://img.shields.io/pypi/pyversions/manim-rader)](https://pypi.org/project/manim-rader/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![CI](https://github.com/FTZ-OPUS/manim-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/FTZ-OPUS/manim-radar/actions/workflows/ci.yml)
 
@@ -36,7 +36,7 @@ manim -qh demo.py Demo          # 1080p60
 ## 安装
 
 ```bash
-pip install manim-radar
+pip install manim-rader
 ```
 
 需要 Python ≥ 3.9、`manim >= 0.18`、`numpy`（pip 会自动装）。

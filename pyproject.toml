@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "manim-radar"
+name = "manim-rader"
 version = "0.1.0"
 description = "Animated radar (spider) charts for Manim — build, morph and play whole radar-chart sequences with one line of code."
 readme = "README.md"
