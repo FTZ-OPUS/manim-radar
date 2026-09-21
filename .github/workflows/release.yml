@@ -2,7 +2,7 @@ name: Release
 
 # Publishes to PyPI when a version tag is pushed.
 # Uses PyPI Trusted Publishing — configure the publisher on PyPI first
-# (project: manim-rader, owner: FTZ-OPUS, workflow: release.yml,
+# (project: manim_radar, owner: FTZ-OPUS, workflow: release.yml,
 #  environment: pypi). No API token needs to be stored.
 on:
   push:
