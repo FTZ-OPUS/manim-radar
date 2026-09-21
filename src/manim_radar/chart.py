@@ -122,8 +122,11 @@ class RadarChart(VGroup):
         self._time = 0.0
 
         # ---- fonts & axes --------------------------------------------------
-        self._font_name = cfg.name_font or pick_font(_CJK_FONTS)
-        self._font_number = cfg.number_font or pick_font(_MONO_FONTS)
+        # Manim 0.21 cannot hash a Text object whose font is None.  Minimal
+        # Linux CI images may not contain any of our preferred families, so
+        # fall back to Pango's generic families instead of passing None.
+        self._font_name = cfg.name_font or pick_font(_CJK_FONTS, default="sans")
+        self._font_number = cfg.number_font or pick_font(_MONO_FONTS, default="monospace")
         self._font_title = cfg.title_font or self._font_name
 
         n = self._n = data.n_axes
